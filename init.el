@@ -12,3 +12,4 @@
 (require 'theme)
 
 (require 'misc)
+(require 'projects)

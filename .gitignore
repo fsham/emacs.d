@@ -2,3 +2,6 @@
 elpa/
 network-security.data
 recentf
+/projectile.cache
+/projectile-bookmarks.eld
+eshell/

@@ -42,8 +42,7 @@
                           `([,(cdr char-regexp) 0 font-shape-gstring]))))
 
 (defun eshell/beep (&rest args)
-  "Send a Mac notification message when the command given has
-completed."
+  "Send a Mac notification message when the command given has completed."
 
   (let ((comment (if args
                      (concat "Process has completed: " (car args))

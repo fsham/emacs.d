@@ -82,6 +82,9 @@
 
 (setq inhibit-startup-message t)
 (global-linum-mode)
+(setq-default left-fringe-width  2)
+;;(setq-default right-fringe-width  10)
+;;(set-face-attribute 'fringe nil :background "black")
 
 ;; Выравнивает весь буффер
 (defun iwb ()
