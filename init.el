@@ -13,3 +13,9 @@
 
 (require 'misc)
 (require 'projects)
+(require 'flychecker)
+
+(require 'lang-php)
+(require 'lang-web)
+(require 'lang-javascript)
+(require 'lang-ruby)
