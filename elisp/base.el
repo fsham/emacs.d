@@ -1,3 +1,10 @@
+(setq fill-column 80)
+
+(setq column-number-mode t)
+(setq size-indication-mode t)
+(display-time-mode 1)
+(display-battery-mode t)
+
 (setq gc-cons-threshold (* 80 1024 1024))
 (setq gc-cons-percentage 0.5)
 (setq gnutls-min-prime-bits 4096)
@@ -139,6 +146,8 @@
 (global-set-key (kbd "C-x \\") #'align-regexp)
 (setq
  history-length                     1000
+ history-delete-duplicates          t
+
  backup-inhibited                   nil
  ;;make-backup-files                  t
  auto-save-default                  nil
@@ -153,6 +162,33 @@
   (let ((face (or (get-char-property (point) 'read-face-name)
                   (get-char-property (point) 'face))))
     (if face (message "Face: %s" face) (message "No face at %d" pos))))
+
+(global-set-key "\C-cw" 'compare-windows)
+(auto-image-file-mode t)
+
+(setq ispell-program-name "hunspell"
+      ispell-dictionary "english")
+
+(global-set-key "\C-\M-z" 'scroll-other-window-down)
+
+(add-hook 'dired-load-hook
+          (lambda ()
+            ;; Bind dired-x-find-file.
+            (setq dired-x-hands-off-my-keys nil)
+            (load "dired-x")
+            (setq dired-omit-files
+                (concat dired-omit-files "\\|^\\..+$"))
+            ))
+(autoload 'dired-jump "dired-x"
+  "Jump to Dired buffer corresponding to current buffer." t)
+
+(autoload 'dired-jump-other-window "dired-x"
+  "Like \\[dired-jump] (dired-jump) but in other window." t)
+
+(define-key global-map "\C-x\C-j" 'dired-jump)
+(define-key global-map "\C-x4\C-j" 'dired-jump-other-window)
+(setq dired-listing-switches "-ali")
+
 
 (provide 'base)
 ;;; base ends here

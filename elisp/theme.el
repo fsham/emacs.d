@@ -1,11 +1,25 @@
 ;; оформление
 
-(use-package base16-theme
-  :ensure nil
+;; (use-package base16-theme
+;;   :ensure nil
+;;   :config
+;;   (load-theme 'base16-atelier-estuary t)
+;;   (set-face-attribute 'default nil  :height 140)
+;;   )
+
+(use-package gotham-theme
   :config
-  (load-theme 'base16-atelier-estuary t)
-  (set-face-attribute 'default nil  :height 140)
+  (load-theme 'gotham t)
+  ;; (set-face-attribute 'default nil  :height 140)
   )
+
+
+(defun transparency (value)
+  "Sets the transparency of the frame window. 0=transparent/100=opaque"
+  (interactive "nTransparency Value 0 - 100 opaque:")
+  (set-frame-parameter (selected-frame) 'alpha value))
+(add-to-list 'default-frame-alist '(alpha . (83 83)))
+
 
 (use-package command-log-mode
   :ensure t)

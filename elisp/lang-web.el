@@ -1,5 +1,8 @@
 
 (use-package web-mode
+  :bind (("C-c C-g" . web-mode-set-engine)
+         ("C-c h p" . my-php-symbol-lookup)
+         ("C-c h l" . my-php-laravel-lookup))
   :mode (("\\.html\\'" . web-mode)
          ("\\.html\\.erb\\'" . web-mode)
          ("\\.mustache\\'" . web-mode)

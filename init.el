@@ -4,11 +4,13 @@
 (package-initialize)
 
 (add-to-list 'load-path (concat user-emacs-directory "elisp"))
+(add-to-list 'load-path (concat user-emacs-directory "private"))
 
 (require 'base)
-(require 'baseosx)
+;; (require 'baseosx nil t)
 
 (require 'core)
+(require 'variables nil t)
 (require 'theme)
 
 (require 'misc)
@@ -19,3 +21,5 @@
 (require 'lang-web)
 (require 'lang-javascript)
 (require 'lang-ruby)
+(require 'lang-c)
+(require 'docker)

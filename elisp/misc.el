@@ -83,7 +83,36 @@
   (setq recentf-save-file (recentf-expand-file-name "~/.emacs.d/private/cache/recentf"))
   (recentf-mode 1))
 
+(defun the-the ()
+  "Search forward for for a duplicated word."
+  (interactive)
+  (message "Searching for for duplicated words ...")
+  (push-mark)
+  ;; This regexp is not perfect
+  ;; but is fairly good over all:
+  (if (re-search-forward
+       "\\b\\([^@ \n\t]+\\)[ \n\t]+\\1\\b" nil 'move)
+      (message "Found duplicated word.")
+    (message "End of buffer")))
+(global-set-key "\C-c\\" 'the-the)
 
+(use-package google-translate
+  :init
+  (setq google-translate-default-target-language "ru")
+  (setq google-translate-default-source-language "en")
+  :bind
+  (("C-c t" . google-translate-at-point)
+  ("C-c T" . google-translate-query-translate)
+  ("C-c r" . google-translate-at-point-reverse)
+  ("C-c R" . google-translate-query-translate-reverse)))
 
+(use-package pkgbuild-mode :defer t)
+(use-package restclient :defer t)
+(use-package geben)
+
+(defun remote-shell (server user)
+  (interactive "sServer: \nsuser: ")
+  (let ((default-directory (format "/ssh:%s@%s:" user server)))
+    (shell)))
 
 (provide 'misc)

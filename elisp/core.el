@@ -1,6 +1,24 @@
 
 ;; Основые модули системы
 
+(use-package spinner)
+(use-package seq)
+(use-package hydra)
+
+(when (boundp 'my-github-token)
+  (use-package paradox
+    :defer t
+    :config
+    (progn
+      ;; The "paradox-token" file is supposed to contain this line:
+      ;;     (setq paradox-github-token "<YOUR_TOKEN>")
+      (setq paradox-github-token my-github-token)
+      (load (locate-user-emacs-file "paradox-token") :noerror :nomessage)
+
+      (setq paradox-lines-per-entry 1)
+      (setq paradox-automatically-star t)
+
+      (paradox-enable))))
 
 (use-package bm
   :ensure t
@@ -77,8 +95,12 @@
 
 ;; Custom binding for magit-status
 (use-package magit
-  :config
-  (global-set-key (kbd "C-c m") 'magit-status))
+  :init
+  (global-magit-file-mode 1)
+  :bind
+  (("C-c m" . magit-status)
+   ("C-x M-g" . magit-dispatch-popup))
+  )
 
 (setq inhibit-startup-message t)
 ;; (global-linum-mode)

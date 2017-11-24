@@ -59,4 +59,6 @@
 
   )
 
+(use-package typescript-mode :defer t)
+
 (provide 'lang-javascript)
