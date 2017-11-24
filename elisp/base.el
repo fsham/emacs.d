@@ -1,10 +1,5 @@
 (setq fill-column 80)
 
-(setq column-number-mode t)
-(setq size-indication-mode t)
-(display-time-mode 1)
-(display-battery-mode t)
-
 (setq gc-cons-threshold (* 80 1024 1024))
 (setq gc-cons-percentage 0.5)
 (setq gnutls-min-prime-bits 4096)
@@ -75,7 +70,6 @@
 ;;(global-auto-revert-mode t)
 
 ;; Disable toolbar & menubar
-(menu-bar-mode -1)
 (when (fboundp 'tool-bar-mode)
   (tool-bar-mode -1))
 (when (  fboundp 'scroll-bar-mode)
@@ -86,8 +80,6 @@
 ;; Delete trailing whitespace before save
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
 (menu-bar-mode -99)
 (setq column-number-mode t)
 (setq size-indication-mode t)
@@ -95,6 +87,10 @@
 ;(setq cursor-type 'bar)
 ;(setq-default cursor-type 'bar)
 (setq-default indent-tabs-mode nil)
+(display-time-mode 1)
+(display-battery-mode t)
+
+
 (setq c-basic-offset 4)
 (setq tab-width 4)
 
