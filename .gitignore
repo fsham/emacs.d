@@ -1,3 +1,5 @@
+vendor/
+ac-comphist.dat
 .custom.el
 elpa/
 network-security.data
