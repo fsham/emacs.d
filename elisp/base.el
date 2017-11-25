@@ -66,7 +66,7 @@
 
 ;; Backups enabled, use nil to disable
 
-(fset 'yes-or-no-p 'y-or-n-p)
+;; (fset 'yes-or-no-p 'y-or-n-p)
 ;;(global-auto-revert-mode t)
 
 ;; Disable toolbar & menubar
@@ -75,7 +75,7 @@
 (when (  fboundp 'scroll-bar-mode)
   (scroll-bar-mode -1))
 
-(show-paren-mode 1)
+;; (show-paren-mode 1)
 
 ;; Delete trailing whitespace before save
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
@@ -100,9 +100,6 @@
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-cb" 'org-iswitchb)
 
-
-;; enable y/n answers
-(fset 'yes-or-no-p 'y-or-n-p)
 
 ;; more useful frame title, that show either a file or a
 ;; buffer name (if the buffer isn't visiting a file)
