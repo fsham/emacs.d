@@ -9,8 +9,8 @@
 (require 'base)
 ;; (require 'baseosx nil t)
 
-(require 'core)
 (require 'variables nil t)
+(require 'core)
 (require 'theme)
 
 (require 'misc)
