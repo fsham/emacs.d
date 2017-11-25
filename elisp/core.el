@@ -124,6 +124,8 @@
 
 (electric-pair-mode t)
 
+(use-package browse-kill-ring)
+
 ;; (use-package dash-functional)
 ;; (use-package all-the-icons)
 ;; (use-package treemacs
