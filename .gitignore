@@ -1,6 +1,7 @@
 .custom.el
 /projectile-bookmarks.eld
 /projectile.cache
+TAGS
 ac-comphist.dat
 auto-save-list/
 bookmarks
@@ -12,4 +13,5 @@ network-security.data
 private/
 recentf
 tramp
+url/
 vendor/
