@@ -122,7 +122,7 @@
 
 (global-set-key (kbd "C-c n") 'iwb)
 
-(electric-pair-mode t)
+(electric-pair-mode -1)
 
 (use-package browse-kill-ring)
 
