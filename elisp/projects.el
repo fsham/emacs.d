@@ -19,7 +19,7 @@
 (use-package projectile
   :ensure t
   :config
-  (add-hook 'prog-mode-hook 'projectile-mode)
+  ;; (add-hook 'prog-mode-hook 'projectile-mode)
   ;; (setq projectile-enable-caching t)
   ;; (setq projectile-switch-project-action 'projectile-dired)
   )
