@@ -10,7 +10,9 @@
   :config
   (progn
     (setq web-mode-engines-alist
-          '(("blade"  . "\\.blade\\.")))))
+          '(("blade"  . "\\.blade\\.")))
+    (setq web-mode-enable-auto-indentation nil)
+    ))
 
 
 (provide 'lang-web)
