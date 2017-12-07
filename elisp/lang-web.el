@@ -1,3 +1,7 @@
+(use-package mustache-mode
+  :mode
+  (("\\.mst\\'" . mustache-mode))
+  )
 
 (use-package web-mode
   :bind (("C-c C-g" . web-mode-set-engine)
