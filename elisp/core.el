@@ -106,7 +106,7 @@
   )
 (use-package magit-gitflow)
 
-(setq inhibit-startup-message t)
+;; (setq inhibit-startup-message t)
 ;; (global-linum-mode)
 (setq-default left-fringe-width  2)
 ;;(setq-default right-fringe-width  10)
