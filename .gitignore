@@ -1,4 +1,5 @@
 .custom.el
+.emacs.desktop*
 /projectile-bookmarks.eld
 /projectile.cache
 TAGS

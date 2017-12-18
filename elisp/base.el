@@ -187,5 +187,8 @@
   (add-hook 'sql-mode-hook 'sql-upcase-mode)
   (add-hook 'sql-interactive-mode-hook 'sql-upcase-mode))
 
+(desktop-save-mode 1)
+(setq desktop-auto-save-timeout 5)
+
 (provide 'base)
 ;;; base ends here
