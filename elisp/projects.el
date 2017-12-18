@@ -24,17 +24,17 @@
   ;; (setq projectile-switch-project-action 'projectile-dired)
   )
 
-(use-package perspective
-  :ensure t
-  :bind ("C-x x x" . persp-switch-last)
-  :init (persp-mode +1)
+;; (use-package perspective
+;;   :ensure t
+;;   :bind ("C-x x x" . persp-switch-last)
+;;   :init (persp-mode +1)
 
-  (use-package persp-projectile
-    :ensure t
-    :bind ("C-x x P" . projectile-persp-switch-project))
+;;   (use-package persp-projectile
+;;     :ensure t
+;;     :bind ("C-x x P" . projectile-persp-switch-project))
 
-  :config
-    (setq persp-interactive-completion-function #'ido-completing-read)
-    (persp-turn-off-modestring))
+;;   :config
+;;     (setq persp-interactive-completion-function #'ido-completing-read)
+;;     (persp-turn-off-modestring))
 
 (provide 'projects)
