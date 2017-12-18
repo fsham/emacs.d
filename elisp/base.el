@@ -182,6 +182,10 @@
 (define-key global-map "\C-x4\C-j" 'dired-jump-other-window)
 (setq dired-listing-switches "-ali")
 
+(load-file "~/.emacs.d/sql-upcase.el")
+(when (require 'sql-upcase nil :noerror)
+  (add-hook 'sql-mode-hook 'sql-upcase-mode)
+  (add-hook 'sql-interactive-mode-hook 'sql-upcase-mode))
 
 (provide 'base)
 ;;; base ends here
