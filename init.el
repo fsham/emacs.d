@@ -22,4 +22,5 @@
 (require 'lang-javascript)
 (require 'lang-ruby)
 (require 'lang-c)
+(require 'lang-solidity)
 (require 'docker)
