@@ -1,18 +1,20 @@
 ;; оформление
 
-;; (use-package base16-theme
-;;   :ensure nil
-;;   :config
-;;   (load-theme 'base16-atelier-estuary t)
-;;   (set-face-attribute 'default nil  :height 140)
-;;   )
-
-(use-package gotham-theme
+(use-package base16-theme
   :config
-  (load-theme 'gotham t)
+  ;; (load-theme 'base16-default-dark t)
   ;; (set-face-attribute 'default nil  :height 140)
   )
 
+(use-package gotham-theme
+  :config
+  ;; (load-theme 'gotham t)
+  )
+
+(use-package cyberpunk-theme
+  :config
+  (load-theme 'cyberpunk t)
+  )
 
 (defun transparency (value)
   "Sets the transparency of the frame window. 0=transparent/100=opaque"
