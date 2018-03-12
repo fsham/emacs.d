@@ -46,7 +46,10 @@
     :diminish js2-refactor-mode
     :config
     (js2r-add-keybindings-with-prefix "C-c j r"))
-  (add-hook 'js2-mode-hook 'js2-refactor-mode))
+  (add-hook 'js2-mode-hook 'js2-refactor-mode)
+  (use-package ac-js2 :defer t)
+  (add-hook 'js2-mode-hook 'ac-js2-mode)
+  )
 
 (use-package rjsx-mode
   :mode
@@ -56,7 +59,8 @@
   (setq js-indent-level 4)
   (setq js2-indent-level 4)
   (setq js2-basic-offset 4)
-
+  (use-package ac-js2 :defer t)
+  (add-hook 'rjsx-mode-hook 'ac-js2-mode)
   )
 
 (use-package typescript-mode :defer t)
