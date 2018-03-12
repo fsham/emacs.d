@@ -190,5 +190,13 @@
 (desktop-save-mode 1)
 (setq desktop-auto-save-timeout 5)
 
+;; Appointments
+(appt-activate 1)
+(setq
+ appt-display-format 'echo
+ appt-display-mode-line t
+ appt-audible t
+ )
+
 (provide 'base)
 ;;; base ends here
