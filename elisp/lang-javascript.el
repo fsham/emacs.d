@@ -16,6 +16,7 @@
   (setq js-indent-level 4)
   (setq js2-indent-level 4)
   (setq js2-basic-offset 4)
+  (setq sgml-basic-offset 4)
 
   ;; tern :- IDE like features for javascript and completion
   ;; http://ternjs.net/doc/manual.html#emacs
@@ -59,6 +60,7 @@
   (setq js-indent-level 4)
   (setq js2-indent-level 4)
   (setq js2-basic-offset 4)
+  (setq sgml-basic-offset 4)
   (use-package ac-js2 :defer t)
   (add-hook 'rjsx-mode-hook 'ac-js2-mode)
   )
