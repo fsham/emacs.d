@@ -10,7 +10,7 @@
 
 (defun my-php-laravel-lookup ()
   (interactive)
-  (my-php-lookup "https://laravel.com/api/5.5/search.html?search="))
+  (my-php-lookup "https://laravel.com/api/5.6/search.html?search="))
 
 (defun my-mdn-lookup ()
   (interactive)
