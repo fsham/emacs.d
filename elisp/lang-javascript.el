@@ -21,6 +21,7 @@
   (setq js2-indent-level 4)
   (setq js2-basic-offset 4)
   (setq sgml-basic-offset 4)
+  (add-hook 'js2-mode-hook #'js2-imenu-extras-mode)
   (use-package js2-refactor :defer t
     :diminish js2-refactor-mode
     :config
@@ -31,45 +32,43 @@
 
   ;; tern :- IDE like features for javascript and completion
   ;; http://ternjs.net/doc/manual.html#emacs
-  ;; (use-package tern
-  ;;   :config
-  ;;   (defun my-js-mode-hook ()
-  ;;     "Hook for `js-mode'."
-  ;;     (set (make-local-variable 'company-backends)
-  ;;          '((company-tern company-files))))
-  ;;   (add-hook 'js2-mode-hook 'my-js-mode-hook)
-  ;;   (add-hook 'js2-mode-hook 'company-mode))
+  (use-package company)
+  (use-package company-tern)
+  (add-to-list 'company-backends 'company-tern)
+  (add-hook 'js2-mode-hook (lambda ()
+                           (tern-mode)
+                           (company-mode)))
 
-  ;; (add-hook 'js2-mode-hook 'tern-mode)
-
-  ;; ;; company backend for tern
-  ;; ;; http://ternjs.net/doc/manual.html#emacs
-  ;; (use-package company-tern)
-
+  ;; Disable completion keybindings, as we use xref-js2 instead
+  (define-key tern-mode-keymap (kbd "M-.") nil)
+  (define-key tern-mode-keymap (kbd "M-,") nil)
+  (use-package rjsx-mode
+    :mode
+    ("\\.jsx$" . rjsx-mode)
+    :config
+    (add-hook 'rxsx-mode-hook (lambda ()
+                                (tern-mode)
+                                (company-mode)))
+    ;; (use-package ac-js2 :defer t)
+    ;; (add-hook 'rjsx-mode-hook 'ac-js2-mode)
+    )
   ;; Run a JavaScript interpreter in an inferior process window
   ;; https://github.com/redguardtoo/js-comint
   ;; (use-package js-comint
   ;;   :config
   ;;   (setq inferior-js-program-command "node"))
-
-  ;; js2-refactor :- refactoring options for emacs
-  ;; https://github.com/magnars/js2-refactor.el
   )
 
 ;; (use-package ac-js2 :defer t)
 ;; (add-hook 'js2-mode-hook 'ac-js2-mode)
-(use-package js-import)
 (use-package xref-js2
   :defer t
   :config
   (add-to-list 'xref-js2-ignored-dirs "public")
   )
-(use-package rjsx-mode
-  :mode
-  ("\\.jsx$" . rjsx-mode)
-  ;; (use-package ac-js2 :defer t)
-  ;; (add-hook 'rjsx-mode-hook 'ac-js2-mode)
-  )
+(use-package js-import)
+(use-package react-snippets)
+(use-package angular-snippets)
 
 (use-package typescript-mode :defer t)
 
