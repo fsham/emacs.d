@@ -27,6 +27,8 @@
          ("C-c ]" . bm-next)))
 
 
+(use-package yasnippet-snippets)
+
 ;; (use-package counsel
 ;;   :ensure t
 ;;   :bind
