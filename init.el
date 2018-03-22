@@ -23,4 +23,5 @@
 (require 'lang-ruby)
 (require 'lang-c)
 (require 'lang-solidity)
+(require 'lang-python)
 (require 'docker)
