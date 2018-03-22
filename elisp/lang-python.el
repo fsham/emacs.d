@@ -1,7 +1,7 @@
 (use-package elpy
   :init
-  (setq python-shell-interpreter "jupyter"
-        python-shell-interpreter-args "console --simple-prompt")
+  (setq python-shell-interpreter "python"
+        python-shell-interpreter-args "-i")
   :config
   (elpy-enable)
   )
