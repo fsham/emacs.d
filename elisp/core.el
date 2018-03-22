@@ -127,6 +127,7 @@
 (electric-pair-mode -1)
 
 (use-package browse-kill-ring)
+(use-package know-your-http-well)
 
 ;; (use-package dash-functional)
 ;; (use-package all-the-icons)
