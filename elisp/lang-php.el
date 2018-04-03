@@ -58,6 +58,8 @@
   :mode
   (("\\.php\\'" . php-mode))
   :config
+  (use-package flymake-php)
+  (add-hook 'php-mode-hook 'flymake-php-load)
   :bind (("C-c h p" . my-php-symbol-lookup)
          ("C-c h l" . my-php-laravel-lookup))
   )
