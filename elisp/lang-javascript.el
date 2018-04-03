@@ -41,15 +41,17 @@
   ;; Disable completion keybindings, as we use xref-js2 instead
   (define-key tern-mode-keymap (kbd "M-.") nil)
   (define-key tern-mode-keymap (kbd "M-,") nil)
-  (use-package flymake-jslint)
-  (add-hook 'js2-mode-hook 'flymake-jslint-load)
+  (use-package flymake-jslint :defer t)
+  ;; (add-hook 'js2-mode-hook 'flymake-jslint-load)
   (use-package rjsx-mode
     :mode
     ("\\.jsx$" . rjsx-mode)
     :config
-    (add-hook 'rxsx-mode-hook (lambda ()
+    (add-hook 'rjsx-mode-hook (lambda ()
                                 (tern-mode)
-                                (company-mode)))
+                                (flymake-mode 0)
+                                ;; (company-mode)
+                                ))
     ;; (use-package ac-js2 :defer t)
     ;; (add-hook 'rjsx-mode-hook 'ac-js2-mode)
     )
@@ -59,7 +61,6 @@
   ;;   :config
   ;;   (setq inferior-js-program-command "node"))
   )
-
 ;; (use-package ac-js2 :defer t)
 ;; (add-hook 'js2-mode-hook 'ac-js2-mode)
 (use-package xref-js2
