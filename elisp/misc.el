@@ -31,7 +31,7 @@
   :ensure t
   :bind (("C-c /". company-complete))
   :config
-  (global-company-mode)
+  ;; (global-company-mode)
   )
 
 ;; (use-package magit-gitflow
