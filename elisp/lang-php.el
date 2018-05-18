@@ -44,7 +44,7 @@
                (auto-complete-mode t)
                (require 'ac-php)
                (setq ac-sources  '(ac-source-php ) )
-               (yas-global-mode 1)
+               ;; (yas-global-mode 1)
 	       ;; (require 'company-php)
 	       ;; (company-mode t)
                ;; (add-hook 'before-save-hook 'php-cs-fixer-before-save)
