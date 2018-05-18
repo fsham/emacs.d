@@ -55,6 +55,8 @@
     ;; (use-package ac-js2 :defer t)
     ;; (add-hook 'rjsx-mode-hook 'ac-js2-mode)
     )
+  (use-package prettier-js)
+  ;; (add-hook 'js2-mode-hook 'prettier-js-mode)
   ;; Run a JavaScript interpreter in an inferior process window
   ;; https://github.com/redguardtoo/js-comint
   ;; (use-package js-comint
