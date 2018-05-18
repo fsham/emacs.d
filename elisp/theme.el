@@ -1,15 +1,25 @@
 ;; оформление
 
-(use-package base16-theme
-  :config
-  ;; (load-theme 'base16-default-dark t)
-  ;; (set-face-attribute 'default nil  :height 140)
-  )
+;; (use-package base16-theme
+;;   :config
+;;   (load-theme 'base16-phd t)
+;;   (set-face-attribute 'default nil  :height 110)
+;;   )
 
-(use-package gotham-theme
-  :config
-  ;; (load-theme 'gotham t)
-  )
+;; (use-package gotham-theme
+;;   :config
+;;   (load-theme 'gotham t)
+;;   )
+
+;; (use-package zenburn-theme
+;;   :config
+;;   (load-theme 'zenburn t)
+;;   )
+
+;; (use-package material-theme
+;;   :config
+;;   (load-theme 'material t)
+;;   )
 
 (use-package cyberpunk-theme
   :config
@@ -21,7 +31,6 @@
   (interactive "nTransparency Value 0 - 100 opaque:")
   (set-frame-parameter (selected-frame) 'alpha value))
 (add-to-list 'default-frame-alist '(alpha . (80 80)))
-
 
 (use-package command-log-mode
   :ensure t)
