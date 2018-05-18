@@ -83,7 +83,7 @@
 (menu-bar-mode -99)
 (setq column-number-mode t)
 (setq size-indication-mode t)
-(global-hl-line-mode +1)
+(global-hl-line-mode -1)
 ;(setq cursor-type 'bar)
 ;(setq-default cursor-type 'bar)
 (setq-default indent-tabs-mode nil)
