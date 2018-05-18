@@ -27,6 +27,7 @@
     (js2r-add-keybindings-with-prefix "C-c j r"))
   (add-hook 'js2-mode-hook 'js2-refactor-mode)
   (add-hook 'js2-mode-hook (lambda ()
+                             (flycheck-mode 0)
                              (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)))
 
   ;; tern :- IDE like features for javascript and completion
