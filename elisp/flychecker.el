@@ -5,7 +5,7 @@
 (use-package flycheck
   :ensure t
   :init
-  (global-flycheck-mode)
+  ;; (global-flycheck-mode)
   :config
   (setq flycheck-check-syntax-automatically '(save idle-change mode-enabled)
         flycheck-idle-change-delay 2.0

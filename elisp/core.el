@@ -187,4 +187,10 @@
 ;; (global-set-key (kbd "C-x C-a") 'sidebar-buffers-open)
 
 
+; For programming buffers
+(use-package highlight-indentation
+  :config
+  (add-hook 'prog-mode-hook #'highlight-indentation-current-column-mode))
+
+
 (provide 'core)

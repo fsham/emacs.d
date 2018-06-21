@@ -56,7 +56,8 @@
       ;; inhibit-startup-message            t
       fringes-outside-margins            t
       x-select-enable-clipboard          t
-      use-package-always-ensure          t)
+      use-package-always-ensure          t
+      async-shell-command-display-buffer nil)
 
 ;; Bookmarks
 (setq

@@ -24,4 +24,6 @@
 (require 'lang-c)
 (require 'lang-solidity)
 (require 'lang-python)
+(require 'lang-erl)
 (require 'docker)
+(put 'downcase-region 'disabled nil)
