@@ -18,5 +18,10 @@
     (setq web-mode-enable-auto-indentation nil)
     ))
 
+(use-package sass-mode
+  :mode (("\\.scss\\'" . scss-mode)
+         ("\\.sass\\'" . scss-mode)
+         )
+  )
 
 (provide 'lang-web)
