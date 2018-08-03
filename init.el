@@ -5,6 +5,7 @@
 
 (add-to-list 'load-path (concat user-emacs-directory "elisp"))
 (add-to-list 'load-path (concat user-emacs-directory "private"))
+(add-to-list 'load-path (concat user-emacs-directory "github/tern/emacs"))
 
 (require 'base)
 ;; (require 'baseosx nil t)
