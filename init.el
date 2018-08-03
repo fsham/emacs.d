@@ -25,5 +25,5 @@
 (require 'lang-solidity)
 (require 'lang-python)
 (require 'lang-erl)
-(require 'docker)
+(require 'my-docker)
 (put 'downcase-region 'disabled nil)
