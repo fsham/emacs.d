@@ -26,33 +26,48 @@
     :config
     (js2r-add-keybindings-with-prefix "C-c j r"))
   (add-hook 'js2-mode-hook 'js2-refactor-mode)
+
+  (use-package xref-js2
+    :defer t
+    :config
+    (add-to-list 'xref-js2-ignored-dirs "public"))
   (add-hook 'js2-mode-hook (lambda ()
                              (flycheck-mode 0)
                              (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)))
 
+  ;; (require 'tern)
+  ;; (require 'tern-auto-complete)
+
   ;; tern :- IDE like features for javascript and completion
   ;; http://ternjs.net/doc/manual.html#emacs
-  (use-package company)
-  (use-package company-tern)
-  (add-to-list 'company-backends 'company-tern)
-  (add-hook 'js2-mode-hook (lambda ()
-                           (tern-mode)
-                           (company-mode)))
+  ;; (use-package company)
+  ;; (use-package company-tern)
+  ;; (add-to-list 'company-backends 'company-tern)
+  ;; (add-hook 'js2-mode-hook (lambda ()
+  ;;                          (tern-mode)))
 
   ;; Disable completion keybindings, as we use xref-js2 instead
-  (define-key tern-mode-keymap (kbd "M-.") nil)
-  (define-key tern-mode-keymap (kbd "M-,") nil)
+  ;; (define-key tern-mode-keymap (kbd "M-.") nil)
+  ;; (define-key tern-mode-keymap (kbd "M-,") nil)
+  (define-key js2-mode-map (kbd "M-.") nil)
   (use-package flymake-jslint :defer t)
   ;; (add-hook 'js2-mode-hook 'flymake-jslint-load)
+
   (use-package rjsx-mode
     :mode
     ("\\.jsx$" . rjsx-mode)
     :config
     (add-hook 'rjsx-mode-hook (lambda ()
-                                (tern-mode)
+                                ;; (tern-mode)
                                 (flymake-mode 0)
                                 ;; (company-mode)
                                 ))
+    (defadvice js-jsx-indent-line (after js-jsx-indent-line-after-hack activate)
+      "Workaround sgml-mode and follow airbnb component style."
+      (save-excursion
+        (beginning-of-line)
+        (if (looking-at-p "^ +\/?> *$")
+            (delete-char sgml-basic-offset))))
     ;; (use-package ac-js2 :defer t)
     ;; (add-hook 'rjsx-mode-hook 'ac-js2-mode)
     )
@@ -66,11 +81,6 @@
   )
 ;; (use-package ac-js2 :defer t)
 ;; (add-hook 'js2-mode-hook 'ac-js2-mode)
-(use-package xref-js2
-  :defer t
-  :config
-  (add-to-list 'xref-js2-ignored-dirs "public")
-  )
 (use-package js-import)
 (use-package react-snippets)
 (use-package angular-snippets)
