@@ -39,22 +39,22 @@
 (use-package php-mode
   :init
   (add-hook 'php-mode-hook 'php-array-indent-hook)
-  ;; (add-hook 'php-mode-hook
-  ;;           '(lambda ()
-  ;;              (auto-complete-mode t)
-  ;;              (require 'ac-php)
-  ;;              (setq ac-sources  '(ac-source-php ) )
-  ;;              ;; (yas-global-mode 1)
-  ;;              ;; (require 'company-php)
-  ;;              ;; (company-mode t)
-  ;;              ;; (add-hook 'before-save-hook 'php-cs-fixer-before-save)
-  ;;              ;; (add-to-list 'company-backends 'company-ac-php-backend)
-  ;;              ;; (define-key php-mode-map  (kbd "C-]") 'ac-php-find-symbol-at-point)   ;goto define
-  ;;              ;; (define-key php-mode-map  (kbd "C-t") 'ac-php-location-stack-back)    ;go back
-  ;;              (ac-php-core-eldoc-setup ) ;; enable eldoc
-  ;;              (define-key php-mode-map  (kbd "C-]") 'ac-php-find-symbol-at-point)   ;goto define
-  ;;              (define-key php-mode-map  (kbd "C-t") 'ac-php-location-stack-back)    ;go back
-  ;;              ))
+  (add-hook 'php-mode-hook
+            '(lambda ()
+               (auto-complete-mode t)
+               (require 'ac-php)
+               (setq ac-sources  '(ac-source-php ) )
+               (yas-global-mode 1)
+               ;; (require 'company-php)
+               ;; (company-mode t)
+               ;; (add-hook 'before-save-hook 'php-cs-fixer-before-save)
+               ;; (add-to-list 'company-backends 'company-ac-php-backend)
+               ;; (define-key php-mode-map  (kbd "C-]") 'ac-php-find-symbol-at-point)   ;goto define
+               ;; (define-key php-mode-map  (kbd "C-t") 'ac-php-location-stack-back)    ;go back
+               (ac-php-core-eldoc-setup ) ;; enable eldoc
+               (define-key php-mode-map  (kbd "C-]") 'ac-php-find-symbol-at-point)   ;goto define
+               (define-key php-mode-map  (kbd "C-t") 'ac-php-location-stack-back)    ;go back
+               ))
   :mode
   (("\\.php\\'" . php-mode))
   :config
