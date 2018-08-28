@@ -24,4 +24,8 @@
          )
   )
 
+(use-package slim-mode
+  :mode (("\\.slim\\'" . slim-mode))
+  )
+
 (provide 'lang-web)
