@@ -93,7 +93,7 @@
 
 
 (setq c-basic-offset 4)
-(setq tab-width 4)
+(setq-default tab-width 4)
 
 ;; The following lines are always needed.  Choose your own keys.
 (global-set-key "\C-cl" 'org-store-link)
