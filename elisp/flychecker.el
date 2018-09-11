@@ -22,16 +22,6 @@
   )
 
 ;; (use-package flycheck-color-mode-line)
-(use-package flycheck-pos-tip)
-
-(with-eval-after-load 'flycheck
-  (flycheck-pos-tip-mode))
-
-;; (use-package flycheck-popup-tip)
-;; (with-eval-after-load 'flycheck
-;;   '(add-hook 'flycheck-mode-hook 'flycheck-popup-tip-mode))
-
-
 (custom-set-variables
  '(flycheck-popup-tip-error-prefix "* "))
 
