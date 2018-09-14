@@ -21,16 +21,21 @@
 ;;   (load-theme 'material t)
 ;;   )
 
+;; (use-package cyberpunk-theme
+;;   :config
+;;   (load-theme 'cyberpunk t)
+;;   )
+
 (use-package cyberpunk-theme
   :config
-  (load-theme 'cyberpunk t)
+  (load-theme 'base16-dracula t)
   )
 
 (defun transparency (value)
   "Sets the transparency of the frame window. 0=transparent/100=opaque"
   (interactive "nTransparency Value 0 - 100 opaque:")
   (set-frame-parameter (selected-frame) 'alpha value))
-(add-to-list 'default-frame-alist '(alpha . (80 80)))
+(add-to-list 'default-frame-alist '(alpha . (100 100)))
 
 (use-package command-log-mode
   :ensure t)
