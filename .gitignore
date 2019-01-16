@@ -17,3 +17,6 @@ recentf
 tramp
 url/
 vendor/
+%backup%~
+server/
+session.*
