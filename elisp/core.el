@@ -32,7 +32,7 @@
 ;; Custom binding for magit-status
 (use-package magit
   :init
-  (global-magit-file-mode 1)
+  ;; (global-magit-file-mode 1)
   (add-hook 'magit-mode-hook 'turn-on-magit-gitflow)
   :bind
   (("C-x g" . magit-status)

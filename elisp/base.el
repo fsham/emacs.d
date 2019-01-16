@@ -176,7 +176,7 @@
 
 (define-key global-map "\C-x\C-j" 'dired-jump)
 (define-key global-map "\C-x4\C-j" 'dired-jump-other-window)
-(setq dired-listing-switches "-ali")
+(setq dired-listing-switches "-alih")
 
 (load-file "~/.emacs.d/sql-upcase.el")
 (when (require 'sql-upcase nil :noerror)
