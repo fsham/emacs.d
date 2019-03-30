@@ -6,8 +6,7 @@
 (use-package hydra)
 
 (when (boundp 'my-github-token)
-  (use-package paradox
-    :defer t
+   (use-package paradox
     :config
     (progn
       ;; The "paradox-token" file is supposed to contain this line:
@@ -60,5 +59,7 @@
 
 (use-package browse-kill-ring)
 (use-package know-your-http-well)
+
+(use-package ggtags)
 
 (provide 'core)

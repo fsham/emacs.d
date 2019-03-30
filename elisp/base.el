@@ -158,7 +158,7 @@
 (setq ispell-program-name "hunspell"
       ispell-dictionary "english")
 
-(global-set-key "\C-\M-z" 'scroll-other-window-down)
+;; (global-set-key "\C-\M-z" 'scroll-other-window-down)
 
 (add-hook 'dired-load-hook
           (lambda ()
