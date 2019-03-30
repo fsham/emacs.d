@@ -29,8 +29,8 @@
 (require 'my-docker)
 
 ;; Put in your .emacs or site-start.el file the following lines:
-(require 'cygwin-mount)
-(cygwin-mount-activate)
-(require 'setup-cygwin)
+;; (require 'cygwin-mount)			;
+;; (cygwin-mount-activate)
+;; (require 'setup-cygwin)
 
 (put 'downcase-region 'disabled nil)
