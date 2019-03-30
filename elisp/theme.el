@@ -11,15 +11,15 @@
 ;;   (load-theme 'gotham t)
 ;;   )
 
-(use-package zenburn-theme
-  :config
-  (load-theme 'zenburn t)
-  )
-
-;; (use-package material-theme
+;; (use-package zenburn-theme
 ;;   :config
-;;   (load-theme 'material t)
+;;   (load-theme 'zenburn t)
 ;;   )
+
+(use-package material-theme
+  :config
+  (load-theme 'material t)
+  )
 
 ;; (use-package cyberpunk-theme
 ;;   :config
