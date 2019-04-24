@@ -16,10 +16,10 @@
 ;;   (load-theme 'zenburn t)
 ;;   )
 
-(use-package material-theme
-  :config
-  (load-theme 'material t)
-  )
+;;(use-package material-theme
+;;  :config
+;;  (load-theme 'material t)
+;;  )
 
 ;; (use-package cyberpunk-theme
 ;;   :config
